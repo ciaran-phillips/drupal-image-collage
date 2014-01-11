@@ -118,6 +118,8 @@ function template_preprocess_views_image_collage(&$vars) {
     );
   }
   drupal_add_js(array('image_collage' => array($group => $summaries)), 'setting');
+  drupal_add_js(drupal_get_path('module', 'image_collage') .'/image_collage.js', array('group' => JS_DEFAULT));
+  drupal_add_css(drupal_get_path('module', 'image_collage') . '/css/image_collage.css', array('group' => CSS_DEFAULT));
   //$vars['image_collage'][] = $element;
   
   $vars['blocks'] = $myvars;

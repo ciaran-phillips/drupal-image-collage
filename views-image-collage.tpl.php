@@ -17,8 +17,6 @@
                 <?php echo $b['quote']; ?>
             </div>
         </li>
-        
-    
 <? endforeach; ?>
     </ul>
     <div id="image-collage-overlays">
