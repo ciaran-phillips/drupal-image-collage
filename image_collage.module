@@ -120,5 +120,5 @@ function template_preprocess_views_image_collage(&$vars) {
   drupal_add_js(array('image_collage' => array($group => $summaries)), 'setting');
   //$vars['image_collage'][] = $element;
   
-  $vars['myvars'] = $myvars;
+  $vars['blocks'] = $myvars;
 }
