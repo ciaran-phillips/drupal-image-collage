@@ -11,9 +11,9 @@
     <ul>
 <?php foreach($blocks as $id => $b): ?>
     
-        <li class="img-block" data-id="<?php echo $id ?>">    
+        <li class="img-block" >    
             <?php echo $b['img']; ?>
-            <div class="quote">
+            <div class="quote" data-id="<?php echo $id ?>">
                 <?php echo $b['quote']; ?>
             </div>
         </li>
