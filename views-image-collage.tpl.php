@@ -20,10 +20,25 @@
 <? endforeach; ?>
     </ul>
     <div id="image-collage-overlays">
+        <div class="image-collage-overlay-bg">
+            
+        </div>
         <?php foreach($blocks as $id => $b): ?>
             <div class="overlay" id="overlay-<?php echo $id ?>">
-                <span class="close-button">X</span>
-                <?php echo $b['bio']; ?>
+                <div class="image-collage-overlay-container">
+                        
+                    <span class="image-collage-close-button">X</span>
+                    <div class="image-collage-overlay-left">
+                        <div class="image-collage-overlay-thumbnail">
+                            <?php echo $b['img'] ?>
+                        </div>
+                    </div>
+                    <div class="image-collage-overlay-right">
+                        <?php echo $b['bio']; ?>
+                    </div>
+                
+                
+                </div>
             </div>
         <? endforeach; ?>
     </div>
