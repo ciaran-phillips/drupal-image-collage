@@ -27,7 +27,8 @@ div.image-collage-grid ul {
     display:none;
 }
 .image-collage-grid.overlay-inactive li:hover .quote, .image-collage-grid.overlay-inactive li:hover .quote-bg {
-    display:block;
+    display:table-cell;
+    vertical-align:middle;
     position:absolute;
     top:0;
     left:0;
@@ -86,9 +87,18 @@ div.image-collage-grid ul {
     background:white;
     border:1px solid #ddd;
     height:160px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+.image-collage-details {
+    text-align:center;
+}
+.image-collage-name {
+    font-weight:bold;
 }
 .image-collage-overlay-thumbnail {
-    display:inline-block;
+    display:block;
     margin-left:auto;
     margin-right:auto;
     overflow:hidden;

@@ -32,6 +32,9 @@
                         <div class="image-collage-overlay-thumbnail">
                             <?php echo $b['img'] ?>
                         </div>
+                        <div class="image-collage-details">
+                            <span class="image-collage-name"><?php echo $b['name'] ?></span>
+                        </div>
                     </div>
                     <div class="image-collage-overlay-right">
                         <?php echo $b['bio']; ?>

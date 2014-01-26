@@ -2,10 +2,14 @@
   
   var row_width = 1000;
   var num_in_row = 6;
+  var num_rows = 2;
+  var margin = 80;
   var img_width = row_width / num_in_row;
   var img_height = img_width;
+  var bg_height = (img_height * num_rows) + (margin  * 2) + "px";
   
   $(document).ready(function() {
+    $(".image-collage-overlay-bg").css("height", bg_height);
     $(".image-collage-grid li img").each(function() {
         $(this).css("width", img_width + "px");
         $(this).css("height", img_height + "px");
