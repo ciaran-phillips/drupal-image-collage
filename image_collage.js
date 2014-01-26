@@ -1,16 +1,39 @@
 (function ($) {
+  var img_height = 100;
+  var img_width = 100;
+  var num_in_row = 6;
+  
+  
   $(document).ready(function() {
-  $(".image-collage-grid .quote").click(function() {
-      
-      open_overlay(
-        $("#overlay-"+ $(this).data("id"))
-      );
-    });
+
+    $(".quote").css("width", (img_width * 3) + "px");
+    $(".quote").css("height", img_height + "px");
+    $(".quote").click(function() {
+        
+        open_overlay(
+          $("#overlay-"+ $(this).data("id"))
+        );
+      });
   
     $(".image-collage-close-button").click(function() {
       $(this).parent().parent().css("display","none");
       $(".image-collage-overlay-bg").css("display","none");
     });
+    
+    $(".image-collage-grid .img-block").hover(function() {
+      
+      $(this).children(".quote").each(function(){
+          var col = $(this).data("id") % num_in_row;
+          if (col <= (num_in_row / 2)) {
+            $(this).css("left", img_width + "px");
+          }
+          else {
+            $(this).css("left", "-" + (img_width * 3) + "px");
+          }
+        });
+      
+    });
+    
   });
   
   function open_overlay(overlay) {
