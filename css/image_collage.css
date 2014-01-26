@@ -21,11 +21,12 @@ div.image-collage-grid ul {
 .image-collage-grid li img:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
+  cursor:pointer;
 }
 .image-collage-grid li .quote,.image-collage-grid li .quote-bg {
     display:none;
 }
-.image-collage-grid li:hover .quote, .image-collage-grid li:hover .quote-bg {
+.image-collage-grid.overlay-inactive li:hover .quote, .image-collage-grid.overlay-inactive li:hover .quote-bg {
     display:block;
     position:absolute;
     top:0;
@@ -33,11 +34,12 @@ div.image-collage-grid ul {
     z-index:200;
     color:white;
     background:transparent;
-    padding:4px;
+    padding:1em;
+    font-style:italic;
     box-sizing:border-box;
 }
-.image-collage-grid li:hover .quote-bg {
-    opacity:0.8;
+.image-collage-grid.overlay-inactive li:hover .quote-bg {
+    opacity:0.9;
     background:#6B0103;
 }
 .image-collage-grid {
@@ -52,10 +54,18 @@ div.image-collage-grid ul {
     color:white;
 }
 .image-collage-overlay-bg {
+    z-index:50;
+}
+.image-collage-overlay-container {
+    z-index:150;
+    position:relative;
+}
+.image-collage-overlay-bg {
     background:#6B0103;
     height:400px;
-    width:100%;
-    opacity:0.8;
+    width:3000px;
+    margin-left:-1000px;
+    opacity:0.9;
 }
 .image-collage-overlay-right {
     width:63%;
@@ -70,12 +80,12 @@ div.image-collage-grid ul {
     float:left;
 }
 .image-collage-overlay-left img {
-    width:120px;
+    width:160px;
     padding:5px;
     border-radius:50%;
     background:white;
     border:1px solid #ddd;
-    height:120px;
+    height:160px;
 }
 .image-collage-overlay-thumbnail {
     display:inline-block;

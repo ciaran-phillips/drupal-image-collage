@@ -7,11 +7,11 @@
  * @ingroup views_templates
  */
 ?>
-<div class="image-collage-grid">
+<div class="image-collage-grid overlay-inactive">
     <ul>
 <?php foreach($blocks as $id => $b): ?>
     
-        <li class="img-block" >    
+        <li class="img-block" data-id="<?php echo $id ?>">    
             <?php echo $b['img']; ?>
             <div class="quote-bg" data-id="<?php echo $id ?>"></div>
             <div class="quote" data-id="<?php echo $id ?>">
@@ -21,10 +21,8 @@
         </li>
 <? endforeach; ?>
     </ul>
-    <div id="image-collage-overlays">
-        <div class="image-collage-overlay-bg">
-            
-        </div>
+    <div class="image-collage-overlays">
+        
         <?php foreach($blocks as $id => $b): ?>
             <div class="overlay" id="overlay-<?php echo $id ?>">
                 <div class="image-collage-overlay-container">
@@ -44,4 +42,7 @@
             </div>
         <? endforeach; ?>
     </div>
+</div>
+<div class="image-collage-overlay-bg">
+    
 </div>
