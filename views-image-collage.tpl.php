@@ -13,7 +13,9 @@
     
         <li class="img-block" >    
             <?php echo $b['img']; ?>
+            <div class="quote-bg" data-id="<?php echo $id ?>"></div>
             <div class="quote" data-id="<?php echo $id ?>">
+                
                 <?php echo $b['quote']; ?>
             </div>
         </li>
