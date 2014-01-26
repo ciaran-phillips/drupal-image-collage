@@ -1,9 +1,20 @@
 (function ($) {
   $(document).ready(function() {
   $(".image-collage-grid .quote").click(function() {
-      var id = $(this).data("id");
-      var overlay = $("#overlay-"+id);
+      
+      open_overlay(
+        $("#overlay-"+ $(this).data("id"))
+      );
       $(overlay).css("display","block");
     });
+  
+    $(".close-button").click(function() {
+      $(this).parent().css("display","none");
+    });
   });
+  
+  function open_overlay(overlay) {
+    $(".image-collage-grid .overlay").css("display", "none");
+    $(overlay).css("display","block");
+  }
 })(jQuery);

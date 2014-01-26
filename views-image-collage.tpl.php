@@ -22,6 +22,7 @@
     <div id="image-collage-overlays">
         <?php foreach($blocks as $id => $b): ?>
             <div class="overlay" id="overlay-<?php echo $id ?>">
+                <span class="close-button">X</span>
                 <?php echo $b['bio']; ?>
             </div>
         <? endforeach; ?>
