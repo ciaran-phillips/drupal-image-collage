@@ -26,7 +26,7 @@ div.image-collage-grid ul {
 .image-collage-grid li .quote,.image-collage-grid li .quote-bg {
     display:none;
 }
-.image-collage-grid.overlay-inactive .img-block:hover .quote, .image-collage-grid.overlay-inactive li:hover .quote-bg {
+.image-collage-grid.overlay-inactive .img-block:hover .quote, .image-collage-grid.overlay-inactive .img-block:hover .quote-bg {
     display:table-cell;
     vertical-align:middle;
     position:absolute;
