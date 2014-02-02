@@ -121,3 +121,44 @@ span.image-collage-close-button {
     color:#6B0103;
     
 }
+
+
+
+/*
+ * Flexslider Specific
+ */
+.flex-direction-nav {
+    position:absolute;
+    top:50%;
+    width:100%;
+}
+.flex-direction-nav a {
+    -webkit-transition: none;
+    opacity:1;
+}
+.flex-direction-nav li a:before {
+    background: #6B0103;
+    border-radius: 50%;
+    color: #fff;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    opacity:1;
+    font-weight:light;
+    font-size:18px;
+}
+.flex-direction-nav li:nth-child(2n) {
+    float:right;
+}
+.flexslider:hover .flex-prev, .flexslider:hover .flex-next {
+    opacity:1;
+}
+.flexslider .flex-next {
+    right:10px;
+}
+.flexslider .flex-prev {
+    left:10px;
+}
+.flexslider .flex-disabled {
+    opacity:1!important;
+}

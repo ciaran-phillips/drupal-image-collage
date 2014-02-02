@@ -131,8 +131,8 @@ function template_preprocess_views_image_collage(&$vars) {
   drupal_add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', array('group' => JS_DEFAULT));
   drupal_add_js($mod_path . '/flexslider/jquery.flexslider.js', array('group' => JS_DEFAULT));
   drupal_add_js($mod_path .'/image_collage.js', array('group' => JS_DEFAULT));
-  drupal_add_css($mod_path . '/css/image_collage.css', array('group' => CSS_DEFAULT));
   drupal_add_css($mod_path . '/flexslider/flexslider.css', array('group' => CSS_DEFAULT));
+  drupal_add_css($mod_path . '/css/image_collage.css', array('group' => CSS_DEFAULT));
   //$vars['image_collage'][] = $element;
   
   $vars['blocks'] = $myvars;
