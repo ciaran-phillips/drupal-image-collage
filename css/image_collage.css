@@ -9,6 +9,9 @@ div.image-collage-grid ul {
     margin-left:0;
     padding:0;
 }
+.image-collage-grid {
+    width:100%;
+}
 .image-collage-grid li img {
     margin:0;
     padding:0;
@@ -91,10 +94,11 @@ div.image-collage-grid ul {
     margin-top:-2em;
     background:white;
     border:1px solid #ddd;
-    height:180px;
+    height:auto;
     margin-left:auto;
     margin-right:auto;
     display:block;
+    max-width:100%;
 }
 .image-collage-details {
     text-align:center;
