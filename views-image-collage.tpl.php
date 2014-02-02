@@ -34,6 +34,7 @@
                         </div>
                         <div class="image-collage-details">
                             <span class="image-collage-name"><?php echo $b['name'] ?></span>
+                            <span class="image-collage-tagline"><?php echo $b['tagline'] ?></span>
                         </div>
                     </div>
                     <div class="image-collage-overlay-right">

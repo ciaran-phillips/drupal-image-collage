@@ -22,6 +22,7 @@ class views_plugin_style_image_collage extends views_plugin_style_default {
     $options['quote'] = array('default' => '');
     $options['bio'] = array('default' => '');
     $options['image'] = array('default' => '');
+    $options['tagline'] = array('default' => '');
 
     return $options;
   }
@@ -52,6 +53,15 @@ class views_plugin_style_image_collage extends views_plugin_style_default {
       '#options' => $options,
       '#default_value' => $this->options['quote'],
       '#description' => t('A short quote shown on hover'),
+      '#weight' => -48,
+    );
+    
+    $form['tagline'] = array(
+      '#type' => 'select',
+      '#title' => t('Tagline'),
+      '#options' => $options,
+      '#default_value' => $this->options['tagline'],
+      '#description' => t('A line shown below the member\'s name in the overlay'),
       '#weight' => -48,
     );
 

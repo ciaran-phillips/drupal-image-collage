@@ -14,6 +14,7 @@
         $(this).css("width", img_width + "px");
         $(this).css("height", img_height + "px");
       });
+    $(".image-collage-close-button").css("margin-top", "-" + margin + "px");
     $(".image-collage-grid").css("width", row_width + "px")
     $(".image-collage-overlays").children().css("width", (img_width * num_in_row) + "px");
     $(".quote, .quote-bg").css("width", (img_width * 3) + "px");
@@ -25,6 +26,7 @@
       });
   
     $(".image-collage-close-button").click(function() {
+      
       $(this).parent().parent().css("display","none");
       $(".image-collage-overlay-bg").css("display","none");
       $(".image-collage-grid").addClass("overlay-inactive");

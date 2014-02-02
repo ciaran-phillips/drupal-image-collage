@@ -80,6 +80,16 @@ function template_preprocess_views_image_collage(&$vars) {
       $quote = strip_tags(htmlspecialchars_decode($quote));
       $myvars[$id]['quote'] = $quote;
     }
+    $field = $options['tagline'];
+    $tagline = '';
+    if (isset($view->field[$field])) {
+      $tagline = $style->get_field($id, $field);
+      if ($view->field[$field]->options['label']) {
+        $tagline = $view->field[$field]->options['label'] . ': ' . $tagline;
+      }
+      $tagline = strip_tags(htmlspecialchars_decode($tagline));
+      $myvars[$id]['tagline'] = $tagline;
+    }
     $field = $options['bio'];
     $bio = '';
     if (isset($view->field[$field])) {
