@@ -8,7 +8,9 @@
  */
 ?>
 <div class="image-collage-grid overlay-inactive">
-    <ul>
+    <div class="flex-container">
+        <div class="flexslider">
+    <ul class="slides">
 <?php foreach($blocks as $id => $b): ?>
     
         <li class="img-block" data-id="<?php echo $id ?>">    
@@ -21,6 +23,8 @@
         </li>
 <? endforeach; ?>
     </ul>
+</div>
+        </div>
     <div class="image-collage-overlays">
         
         <?php foreach($blocks as $id => $b): ?>
