@@ -11,16 +11,26 @@
     <div class="flex-container">
         <div class="flexslider">
     <ul class="slides">
-<?php foreach($blocks as $id => $b): ?>
-    
-        <li class="img-block" data-id="<?php echo $id ?>">    
+<?php foreach($blocks as $id => $b):
+    $col_id = ($id / 2) - (($id % 2) / 2);
+    $row_id = $id % 2;
+
+?>
+        <?php if (!($id % 2)): ?>
+            <li>
+        <?php endif; ?>
+        <div class="img-block" data-id="<?php echo $id ?>" data-col="<?php echo $col_id ?>" data-row="<?php echo $row_id ?>">    
             <?php echo $b['img']; ?>
             <div class="quote-bg" data-id="<?php echo $id ?>"></div>
             <div class="quote" data-id="<?php echo $id ?>">
                 
                 <?php echo $b['quote']; ?>
             </div>
-        </li>
+        </div>
+        <?php if (($id % 2)): ?>
+            </li>
+        <?php endif; ?>
+    
 <? endforeach; ?>
     </ul>
 </div>

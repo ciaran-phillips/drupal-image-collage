@@ -18,7 +18,7 @@ div.image-collage-grid ul {
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
 }
-.image-collage-grid li img:hover {
+.image-collage-grid .img-block:hover img {
   filter: none;
   -webkit-filter: grayscale(0%);
   cursor:pointer;
@@ -26,7 +26,7 @@ div.image-collage-grid ul {
 .image-collage-grid li .quote,.image-collage-grid li .quote-bg {
     display:none;
 }
-.image-collage-grid.overlay-inactive li:hover .quote, .image-collage-grid.overlay-inactive li:hover .quote-bg {
+.image-collage-grid.overlay-inactive .img-block:hover .quote, .image-collage-grid.overlay-inactive li:hover .quote-bg {
     display:table-cell;
     vertical-align:middle;
     position:absolute;
@@ -40,7 +40,7 @@ div.image-collage-grid ul {
     font-weight:bold;
     box-sizing:border-box;
 }
-.image-collage-grid.overlay-inactive li:hover .quote-bg {
+.image-collage-grid.overlay-inactive .img-block:hover .quote-bg {
     opacity:0.9;
     background:#6B0103;
 }
