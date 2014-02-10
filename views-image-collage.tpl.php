@@ -7,7 +7,7 @@
  * @ingroup views_templates
  */
 ?>
-<div class="image-collage-grid overlay-inactive">
+<div id="image-collage-grid" class=" overlay-inactive">
     <div class="flex-container">
         <div class="flexslider">
     <ul class="slides">
@@ -47,7 +47,12 @@
                             <?php echo $b['img'] ?>
                         </div>
                         <div class="image-collage-details">
-                            <span class="image-collage-name"><?php echo $b['name'] ?></span>
+                            
+                            <div>
+                                <span class="image-collage-name">
+                                    <?php echo $b['name'] ?>
+                                </span>
+                            </div>
                             <span class="image-collage-tagline"><?php echo $b['tagline'] ?></span>
                         </div>
                     </div>

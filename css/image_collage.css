@@ -1,18 +1,18 @@
-.image-collage-grid ul li{
+#image-collage-grid ul li{
     display:block;
     float:left;
     list-style-type:none;
     margin:0;
     position:relative;
 }
-div.image-collage-grid ul {
+div#image-collage-grid ul {
     margin-left:0;
     padding:0;
 }
-.image-collage-grid {
+#image-collage-grid {
     width:100%;
 }
-.image-collage-grid li img {
+#image-collage-grid li img {
     margin:0;
     padding:0;
     width:100px;
@@ -21,15 +21,15 @@ div.image-collage-grid ul {
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
 }
-.image-collage-grid .img-block:hover img {
+#image-collage-grid .img-block:hover img {
   filter: none;
   -webkit-filter: grayscale(0%);
   cursor:pointer;
 }
-.image-collage-grid li .quote,.image-collage-grid li .quote-bg {
+#image-collage-grid li .quote,#image-collage-grid li .quote-bg {
     display:none;
 }
-.image-collage-grid.overlay-inactive .img-block:hover .quote, .image-collage-grid.overlay-inactive .img-block:hover .quote-bg {
+#image-collage-grid.overlay-inactive .img-block:hover .quote, #image-collage-grid.overlay-inactive .img-block:hover .quote-bg {
     display:table-cell;
     vertical-align:middle;
     position:absolute;
@@ -44,25 +44,28 @@ div.image-collage-grid ul {
     box-sizing:border-box;
     -moz-box-sizing:border-box;
 }
-.image-collage-grid.overlay-inactive .img-block:hover .quote-bg {
+#image-collage-grid.overlay-inactive .img-block:hover .quote-bg {
     opacity:0.9;
     background:#6B0103;
 }
-.image-collage-grid {
+#image-collage-grid {
     position:relative;
     font-family:'arial';
 }
-.image-collage-grid .overlay, .image-collage-overlay-bg {
+#image-collage-grid .overlay, .image-collage-overlay-bg {
     display:none;
     position:absolute;
     top:0;
     left:0;
     color:white;
 }
-.image-collage-overlay-bg {
+#image-collage-grid .overlay p {
+    color:#ffffff;
+}
+#image-collage-grid .image-collage-overlay-bg {
     z-index:50;
 }
-.image-collage-overlay-container {
+#image-collage-grid .image-collage-overlay-container {
     z-index:150;
     position:relative;
 }
@@ -73,21 +76,21 @@ div.image-collage-grid ul {
     margin-left:-1000px;
     opacity:0.9;
 }
-.image-collage-overlay-right {
+#image-collage-grid .image-collage-overlay-right {
     width:63%;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     padding:1em;
     float:left;
 }
-.image-collage-overlay-left {
+#image-collage-grid .image-collage-overlay-left {
     width:27%;
     padding:1em;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     float:left;
 }
-.image-collage-overlay-left img {
+#image-collage-grid .image-collage-overlay-left img {
     width:180px;
     padding:5px;
     border-radius:50%;
@@ -98,27 +101,30 @@ div.image-collage-grid ul {
     margin-left:auto;
     margin-right:auto;
     display:block;
+    float:none;
     max-width:100%;
 }
-.image-collage-details {
+#image-collage-grid .image-collage-details {
     text-align:center;
+    clear:both;
+    margin-top:0.5em;
 }
-.image-collage-details span {
+#image-collage-grid .image-collage-details span {
     display:block;
     margin:1em 0;
 }
-.image-collage-name {
+#image-collage-grid .image-collage-name {
     font-weight:bold;
 }
-.image-collage-tagline {
+#image-collage-grid .image-collage-tagline {
     font-style:italic;
 }
-.image-collage-overlay-thumbnail {
+#image-collage-grid .image-collage-overlay-thumbnail {
     display:block;
     margin-left:auto;
     margin-right:auto;
 }
-span.image-collage-close-button {
+#image-collage-grid span.image-collage-close-button {
     display:block;
     background:white;
     padding:10px;
@@ -134,16 +140,16 @@ span.image-collage-close-button {
 /*
  * Flexslider Specific
  */
-.flex-direction-nav {
+#image-collage-grid .flex-direction-nav {
     position:absolute;
     top:50%;
     width:100%;
 }
-.flex-direction-nav a {
+#image-collage-grid .flex-direction-nav a {
     -webkit-transition: none;
     opacity:1;
 }
-.flex-direction-nav li a:before {
+#image-collage-grid .flex-direction-nav li a:before {
     background: #6B0103;
     border-radius: 50%;
     color: #fff;
@@ -154,18 +160,18 @@ span.image-collage-close-button {
     font-weight:light;
     font-size:18px;
 }
-.flex-direction-nav li:nth-child(2n) {
+#image-collage-grid .flex-direction-nav li:nth-child(2n) {
     float:right;
 }
-.flexslider:hover .flex-prev, .flexslider:hover .flex-next {
+#image-collage-grid .flexslider:hover .flex-prev, .flexslider:hover .flex-next {
     opacity:1;
 }
-.flexslider .flex-next {
+#image-collage-grid .flexslider .flex-next {
     right:10px;
 }
-.flexslider .flex-prev {
+#image-collage-grid .flexslider .flex-prev {
     left:10px;
 }
-.flexslider .flex-disabled {
+#image-collage-grid .flexslider .flex-disabled {
     opacity:1!important;
 }

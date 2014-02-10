@@ -3,8 +3,8 @@
   var num_in_row = 6;
   var num_rows = 2;
   var margin = 80;
-  var img_width = 166;
-  var img_height = 166;
+  var img_width = 160;
+  var img_height = 160;
   var bg_height = (img_height * num_rows) + (margin  * 2) + "px";
   var overlay_span = 3;
   var switch_point = 3;
@@ -13,13 +13,14 @@
   
   $(document).ready(function() {
     $(".image-collage-overlay-bg").css("height", bg_height);
-    $(".image-collage-grid li img").each(function() {
+    $("#image-collage-grid li img").each(function() {
         $(this).css("width", img_width + "px");
         $(this).css("height", img_height + "px");
       });
     $(".image-collage-close-button").css("margin-top", "-" + margin + "px");
+    $(".image-collage-overlay-bg").css("margin-top", "-" + margin + "px");
     $(".quote, .quote-bg").css("height", img_height + "px");
-    $(".image-collage-grid li img").click(function() {
+    $("#image-collage-grid li img").click(function() {
         open_overlay(
           $("#overlay-"+ $(this).parent().data("id"))
         );
@@ -32,7 +33,7 @@
       
       $(this).parent().parent().css("display","none");
       $(".image-collage-overlay-bg").css("display","none");
-      $(".image-collage-grid").addClass("overlay-inactive");
+      $("#image-collage-grid").addClass("overlay-inactive");
     });
     
     update_cols(0);
@@ -41,7 +42,7 @@
   });
   
   function update_overlay_width() {
-    var total_width = $(".image-collage-grid").width();
+    var total_width = $("#image-collage-grid").width();
     if (total_width > ((img_width * 6) - 40)) {
       overlay_span = 3;
       num_in_row = 6;
@@ -55,7 +56,7 @@
   }
   
   function update_cols(start_col) {
-    $(".image-collage-grid .img-block").children(".quote, .quote-bg").each(function(){
+    $("#image-collage-grid .img-block").children(".quote, .quote-bg").each(function(){
         set_pos($(this), start_col);
       });
   }
@@ -77,10 +78,10 @@
   }
   
   function open_overlay(overlay) {
-    $(".image-collage-grid .overlay").css("display", "none");
+    $("#image-collage-grid .overlay").css("display", "none");
     $(overlay).css("display","block");
-    $(".image-collage-overlay-bg").css("display", "block");
-    $(".image-collage-grid").removeClass("overlay-inactive");
+    $(".image-collage-overlay-bg").css("display", "block"); 
+    $("#image-collage-grid").removeClass("overlay-inactive");
   }
   
   
@@ -92,7 +93,7 @@
     };
     $(window).load(function() {
       $(".flexslider").flexslider({
-        itemWidth: 167,
+        itemWidth: 160,
         itemMargin:0,
         minItems: 2,
         maxItems: 12,

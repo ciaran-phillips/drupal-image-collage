@@ -65,7 +65,7 @@ function template_preprocess_views_image_collage(&$vars) {
     if (isset($view->field[$field])) {
       $name = $style->get_field($id, $field);
       if ($view->field[$field]->options['label']) {
-        $name = $view->field[$field]->options['label'] . ': ' . $name;
+        $name = $name;
       }
       $name = strip_tags(htmlspecialchars_decode($name));
       $myvars[$id]['name'] = $name;
@@ -75,7 +75,7 @@ function template_preprocess_views_image_collage(&$vars) {
     if (isset($view->field[$field])) {
       $quote = $style->get_field($id, $field);
       if ($view->field[$field]->options['label']) {
-        $quote = $view->field[$field]->options['label'] . ': ' . $quote;
+        $quote = $quote;
       }
       $quote = strip_tags(htmlspecialchars_decode($quote));
       $myvars[$id]['quote'] = $quote;
@@ -85,7 +85,7 @@ function template_preprocess_views_image_collage(&$vars) {
     if (isset($view->field[$field])) {
       $tagline = $style->get_field($id, $field);
       if ($view->field[$field]->options['label']) {
-        $tagline = $view->field[$field]->options['label'] . ': ' . $tagline;
+        $tagline = $tagline;
       }
       $tagline = strip_tags(htmlspecialchars_decode($tagline));
       $myvars[$id]['tagline'] = $tagline;
@@ -95,7 +95,7 @@ function template_preprocess_views_image_collage(&$vars) {
     if (isset($view->field[$field])) {
       $bio = $style->get_field($id, $field);
       if ($view->field[$field]->options['label']) {
-        $bio = $view->field[$field]->options['label'] . ': ' . $bio;
+        $bio = $bio;
       }
       $myvars[$id]['bio'] = $bio;
       
@@ -105,7 +105,7 @@ function template_preprocess_views_image_collage(&$vars) {
     if (isset($view->field[$field])) {
       $img = $style->get_field($id, $field);
       if ($view->field[$field]->options['label']) {
-        $img = $view->field[$field]->options['label'] . ': ' . $img;
+        $img = $img;
       }
       $myvars[$id]['img'] = $img;
     }
