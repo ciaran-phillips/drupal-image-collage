@@ -164,8 +164,8 @@ div#image-collage-grid ul {
     font-weight:light;
     font-size:18px;
 }
-#image-collage-grid .flex-direction-nav li:nth-child(2n) {
-    float:right;
+#image-collage-grid .flex-direction-nav li {
+    float:none;
 }
 #image-collage-grid .flexslider:hover .flex-prev, .flexslider:hover .flex-next {
     opacity:1;
@@ -178,4 +178,9 @@ div#image-collage-grid ul {
 }
 #image-collage-grid .flexslider .flex-disabled {
     opacity:1!important;
+}
+#image-collage-grid .flex-direction-nav {
+    position:absolute;
+    height:1px;
+    width:100%;
 }
