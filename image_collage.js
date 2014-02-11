@@ -17,25 +17,29 @@
         $(this).css("width", img_width + "px");
         $(this).css("height", img_height + "px");
       });
-    $(".image-collage-close-button").css("margin-top", "-" + margin + "px");
+    $(".large-overlay-close-btn").css("margin-top", "-" + margin + "px");
     $(".image-collage-overlay-bg").css("margin-top", "-" + margin + "px");
     $(".quote, .quote-bg").css("height", img_height + "px");
     $("#image-collage-grid li img").click(function() {
         open_overlay(
-          $("#overlay-"+ $(this).parent().data("id"))
+          $(this).parent().data("id")
         );
       });
     update_overlay_width();
     $(window).resize(function() {
       update_overlay_width();
     });
-    $(".image-collage-close-button").click(function() {
+    $(".large-overlay-close-btn").click(function() {
       
       $(this).parent().parent().css("display","none");
       $(".image-collage-overlay-bg").css("display","none");
       $("#image-collage-grid").addClass("overlay-inactive");
+      toggle_arrows();
     });
-    
+    $(".mini-overlay-close-btn").click(function() {
+      toggle_arrows();
+      toggle_mini_overlay();
+    });
     update_cols(0);
       
     initialise_slider();
@@ -77,7 +81,32 @@
     }
   }
   
-  function open_overlay(overlay) {
+  function open_overlay(id) {
+    var container_width = $("#image-collage-grid").width();
+      toggle_arrows();
+    if (container_width < 740) {
+      toggle_mini_overlay(id);
+    }
+    else {
+      toggle_large_overlay(id);
+      
+    }
+  }
+  
+  function toggle_mini_overlay(id) {
+    if (typeof id != "undefined") {
+      var img_block = "#img-block-" + id;
+      var quote = $(img_block + " .quote, " + img_block + " .quote-bg");
+      $(quote).addClass("active");
+    }
+    else {
+      var img_blocks = $("#image-collage-grid .img-block .quote, #image-collage-grid .img-block .quote-bg");
+      $(img_blocks).removeClass("active");
+    }
+    
+  }
+  function toggle_large_overlay(id) {
+    var overlay = $("#overlay-"+ id);
     $("#image-collage-grid .overlay").css("display", "none");
     var overlay_height = $(overlay).height();
     overlay_height = overlay_height + (margin * 2);
@@ -88,6 +117,15 @@
     $("#image-collage-grid").removeClass("overlay-inactive");
   }
   
+  function toggle_arrows() {
+    var arrows = $(".flex-direction-nav");
+    if ($(arrows).hasClass("inactive")) {
+      $(arrows).removeClass("inactive");
+    }
+    else {
+      $(arrows).addClass("inactive");
+    }
+  }
   
   function initialise_slider() {
     slider_options = {

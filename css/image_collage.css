@@ -3,14 +3,15 @@
     float:left;
     list-style-type:none;
     margin:0;
-    position:relative;
 }
 div#image-collage-grid ul {
     margin-left:0;
     padding:0;
 }
 #image-collage-grid {
-    width:100%;
+    width:960px;
+    margin-left:auto;
+    margin-right:auto;
 }
 #image-collage-grid li img {
     margin:0;
@@ -29,14 +30,10 @@ div#image-collage-grid ul {
 #image-collage-grid li .quote,#image-collage-grid li .quote-bg {
     display:none;
 }
-#image-collage-grid.overlay-inactive .img-block:hover .quote, #image-collage-grid.overlay-inactive .img-block:hover .quote-bg {
-    display:table-cell;
-    vertical-align:middle;
-    position:absolute;
-    top:0;
-    left:0;
+#image-collage-grid .img-block .quote, #image-collage-grid .img-block .quote-bg {
     z-index:200;
     color:white;
+    vertical-align:middle;
     background:transparent;
     padding:2em 1em;
     font-style:italic;
@@ -44,7 +41,18 @@ div#image-collage-grid ul {
     box-sizing:border-box;
     -moz-box-sizing:border-box;
 }
-#image-collage-grid.overlay-inactive .img-block:hover .quote-bg {
+#image-collage-grid .img-block .quote {
+    padding-top:0;
+    margin-top:2em;
+}
+#image-collage-grid .img-block:hover .quote, #image-collage-grid .img-block:hover .quote-bg {
+    display:table-cell;
+    position:absolute;
+    top:0;
+    left:0;
+    
+}
+#image-collage-grid.overlay-inactive .img-block .quote-bg {
     opacity:0.9;
     background:#6B0103;
 }
@@ -94,7 +102,7 @@ div#image-collage-grid ul {
     -moz-box-sizing:border-box;
     float:left;
 }
-#image-collage-grid .image-collage-overlay-left img {
+#image-collage-grid .image-collage-overlay-thumbnail img {
     width:180px;
     padding:5px;
     border-radius:50%;
@@ -128,7 +136,7 @@ div#image-collage-grid ul {
     margin-left:auto;
     margin-right:auto;
 }
-#image-collage-grid span.image-collage-close-button {
+#image-collage-grid .close-btn {
     display:block;
     background:white;
     padding:10px;
@@ -138,8 +146,20 @@ div#image-collage-grid ul {
     color:#6B0103;
     
 }
-
-
+#image-collage-grid .quote .close-btn {
+    font-size: 16px;
+    line-height: 12px;
+    padding: 5px;
+    position: absolute;
+    right: 5px;
+    top: -10px;
+    cursor:pointer;
+    z-index: 800;
+    display:none;
+}
+#image-collage-grid .quote .image-collage-overlay-thumbnail img{
+    margin:-1em auto 0.5em;
+}
 
 /*
  * Flexslider Specific
@@ -183,4 +203,62 @@ div#image-collage-grid ul {
     position:absolute;
     height:1px;
     width:100%;
+}
+#image-collage-grid .flex-direction-nav.inactive {
+    display:none;
+}
+#image-collage-grid .image-collage-name, #image-collage-grid .quote img {
+    display:none;
+}
+@media all and (max-width:1024px) {
+    #image-collage-grid {
+        width:800px;
+    }
+}
+@media all and (max-width:900px) {
+    #image-collage-grid {
+        width:640px;
+    }
+    #image-collage-grid ul.slides li, #image-collage-grid ul {
+        position:static;
+    }
+    #image-collage-grid .img-block .quote.active,#image-collage-grid .img-block .quote-bg.active {
+        position:absolute;
+        height:320px!important;
+        width:640px!important;
+        top:0!important;
+        left:0!important;
+        display:table-cell;
+        
+    }
+    #image-collage-grid .img-block:hover .quote.active,#image-collage-grid .img-block:hover .quote-bg.active {
+        display:table-cell;
+    }
+    #image-collage-grid .img-block:hover .quote ,#image-collage-grid .img-block:hover .quote-bg {
+        display:none;
+    }
+    #image-collage-grid .quote .close-btn {
+        display:block;
+    }
+    
+    #image-collage-grid .image-collage-name, #image-collage-grid .quote img {
+        display:block;
+    }
+}
+@media all and (max-width:700px) {
+    #image-collage-grid {
+        width:480px;
+    }
+    #image-collage-grid .img-block .quote.active,#image-collage-grid .img-block .quote-bg.active {
+        width:480px!important;
+    }
+}
+@media all and (max-width:500px) {
+    #image-collage-grid {
+        width:320px;
+    }
+    
+    #image-collage-grid .img-block .quote.active,#image-collage-grid .img-block .quote-bg.active {
+        width:320px!important;
+    }
 }
