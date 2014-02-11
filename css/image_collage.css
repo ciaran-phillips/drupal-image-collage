@@ -3,6 +3,7 @@
     float:left;
     list-style-type:none;
     margin:0;
+    position:relative;
 }
 div#image-collage-grid ul {
     margin-left:0;

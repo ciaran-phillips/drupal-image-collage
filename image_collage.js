@@ -96,12 +96,17 @@
   function toggle_mini_overlay(id) {
     if (typeof id != "undefined") {
       var img_block = "#img-block-" + id;
+      
+      var margin_left = start_col * img_width;
+      
       var quote = $(img_block + " .quote, " + img_block + " .quote-bg");
       $(quote).addClass("active");
+      $(quote).css("margin-left", margin_left +"px");
     }
     else {
       var img_blocks = $("#image-collage-grid .img-block .quote, #image-collage-grid .img-block .quote-bg");
       $(img_blocks).removeClass("active");
+      $(img_blocks).css("margin-left");
     }
     
   }
