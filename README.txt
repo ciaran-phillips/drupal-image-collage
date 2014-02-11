@@ -15,5 +15,5 @@ https://github.com/ciaran-phillips/drupal-image-collage
 -- REQUIREMENTS --
 
 views.
-
+jquery
 
