@@ -79,7 +79,11 @@
   
   function open_overlay(overlay) {
     $("#image-collage-grid .overlay").css("display", "none");
+    var overlay_height = $(overlay).height();
+    overlay_height = overlay_height + (margin * 2);
     $(overlay).css("display","block");
+    
+    $(".image-collage-overlay-bg").css("height", overlay_height + "px"); 
     $(".image-collage-overlay-bg").css("display", "block"); 
     $("#image-collage-grid").removeClass("overlay-inactive");
   }
